@@ -4,6 +4,7 @@
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
+    "devHost": "vite --port 3333 --open --host",
     "lint": "eslint .",
     "preview": "vite preview",
     "preview-https": "serve dist",
@@ -13,6 +14,8 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.5.0",
+    "@vue-hero-icons/solid": "^1.7.2",
     "@vueuse/core": "^8.2.0",
     "@vueuse/head": "^0.7.5",
     "nprogress": "^0.2.0",
@@ -20,7 +23,6 @@
     "prism-theme-vars": "^0.2.2",
     "vue": "^3.2.31",
     "vue-demi": "^0.12.4",
-    "vue-i18n": "^9.1.9",
     "vue-router": "^4.0.14"
   },
   "devDependencies": {

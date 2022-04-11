@@ -4,11 +4,13 @@
 .prose {
   --prism-font-family: 'DM Mono', monospace;
 }
-
+ 
 .prose img {
   width: 100%;
 }
-
+html {
+font-size: 110%;
+}
 html:not(.dark) .prose {
   --prism-foreground: #393a34;
   --prism-background: #fbfbfb;
@@ -55,4 +57,61 @@ html.dark .prose {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
+}
+
+html p{
+text-align: justify;
+}
+h1{
+  padding-top: 2rem;
+}
+h2{
+  padding-top: 0.5rem;
+}
+img {
+  height: 255px;
+  width: fit-content !important;
+  margin: 0 auto;
+}
+.main-content a{
+  text-decoration: none !important;
+  color: rgba(29,78,216,var(--un-text-opacity)) !important;
+}
+.main-content a:active{
+  color: white !important;
+}
+
+html.dark blockquote {
+    background:#0F172A;
+}
+blockquote{
+  margin: 50px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  padding:1.2em 30px 1.2em 75px;
+  border-left:8px solid #78C0A8 ;
+  position: relative;
+  background:#E2E8F0;
+}
+blockquote::before{
+  font-family:Arial;
+  content: "\201C";
+  color:#1E293B;
+  font-size:60px;
+  line-height:1.6;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote em{
+  display:block;
+  opacity: 0.7;
+  font-style: normal;
+  font-style: italic;
+  margin-top: 0.8rem;
 }

@@ -1,21 +1,23 @@
 ---
-title: About
+title: This is the title of your site
+description: This is the  og:description and description of your site
 ---
 
-<div class="text-center">
-  <!-- You can use Vue components inside markdown -->
-  <div i-carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
-  <h3>About</h3>
+<div text-center>
+  <h2>About</h2>
+  <p>This page was made in a .md file, using <strong>markdown and  vue templates</strong> </p>
+  <p>\[\frac{(φ^{'})^2}{2}+U(φ)=P = const\]</p>
 </div>
 
-[Vitesse](https://github.com/antfu/vitesse) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for styling and icons.
+<p>\[\frac{(φ^{'})^2}{2}+U(φ)=P = const\]</p>
 
-```js
-// syntax highlighting example
-function vitesse() {
-  const foo = 'bar'
-  console.log(foo)
-}
+# Hola
+[Link text Here](https://link-url-here.org)
+
+```html
+<!-- You can use another page layout like so: -->
+    <route lang="yaml">
+      meta:
+      layout: home
+    </route>
 ```
-
-Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details.

@@ -4,7 +4,6 @@ import { useUserStore } from '~/stores/user'
 const props = defineProps<{ name: string }>()
 const router = useRouter()
 const user = useUserStore()
-const { t } = useI18n()
 
 watchEffect(() => {
   user.setNewName(props.name)
@@ -15,21 +14,16 @@ watchEffect(() => {
   <div>
     <div text-4xl>
       <div i-carbon-pedestrian inline-block />
+      <div i-carbon-close inline-block />
     </div>
-    <p>
-      {{ t('intro.hi', { name: props.name }) }}
-    </p>
-
-    <p text-sm opacity-50>
-      <em>{{ t('intro.dynamic-route') }}</em>
-    </p>
-
+    <p> Hi <span text-indigo-500 uppercase>{{ props.name }}</span></p>
     <template v-if="user.otherNames.length">
       <p text-sm mt-4>
-        <span opacity-75>{{ t('intro.aka') }}:</span>
+        <span opacity-90>Also known as:</span>
         <ul>
-          <li v-for="otherName in user.otherNames" :key="otherName">
+          <li v-for="otherName in user.otherNames" :key="otherName" opacity-50 hover:underline>
             <router-link :to="`/hi/${otherName}`" replace>
+              <!-- If you use replace, then when you will go back, you will not go to the dynamic name, you will go to "/"  -->
               {{ otherName }}
             </router-link>
           </li>
@@ -39,10 +33,10 @@ watchEffect(() => {
 
     <div>
       <button
-        btn m="3 t6" text-sm
+        btn-white mt-4
         @click="router.back()"
       >
-        {{ t('button.back') }}
+        Go back
       </button>
     </div>
   </div>
