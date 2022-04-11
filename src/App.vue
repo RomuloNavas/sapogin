@@ -1,11 +1,8 @@
 <script setup lang="ts">
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: 'Vitesse',
+  title: 'Каноническая Физика - Владимир Сапогин',
   meta: [
-    { name: 'description', content: 'Esta es la App' },
+    { name: 'description', content: 'Сапогин Владимир Георгиевич, Каноническая Физика - Каноническая физика – Царица наукоёмких технологий, Интеграл полного давления имеет непосредственное отношение к гравитационным, электрическим, магнитным полям коллективно взаимодействующих систем, и позволяет значительно дополнить известную физическую картину недостаточно исследованных явлений.' },
   ],
 })
 </script>
