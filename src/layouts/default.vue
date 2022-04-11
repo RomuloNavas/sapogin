@@ -1,5 +1,7 @@
 <script setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
+const route = useRoute()
+
 const mainContent = ref(null)
 onMounted(() => {
   const h2Array = mainContent.value.querySelectorAll('h2')
@@ -9,10 +11,12 @@ onMounted(() => {
   })
   const aArray = mainContent.value.querySelectorAll('a')
   aArray.forEach((a, index) => {
-    // eslint-disable-next-line no-console
-    console.log(a)
     a.classList.add('btn')
-    a.setAttribute('href', `${h2Array[index].innerText}.pdf`)
+    // Using this condition, you can use a custom href for <a> elements in the markdown file.
+    if (a.getAttribute('href') === '') {
+      a.setAttribute('href', `docs${route.path}/${h2Array[index].innerText}.pdf`)
+      a.setAttribute('target', '_blank')
+    }
   })
 })
 function goToTop() {
@@ -25,8 +29,8 @@ function goToTop() {
   <div class="flex flex-row h-screen bg-slate-100 dark:bg-slate-800 text-gray-800">
     <SideBar />
     <MiniNavigationBar />
-    <main class="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in text-gray-700 dark:text-gray-200 overflow-y-auto">
-      <div ref="mainContent" class="main-content flex flex-col flex-grow p-4 h-full text-center ">
+    <main class="main flex flex-col flex-grow transition-all p-2 duration-150 ease-in text-gray-700 dark:text-gray-200 overflow-y-auto">
+      <div ref="mainContent" class="main-content flex flex-col flex-grow  h-full  text-center ">
         <router-view />
       </div>
       <button type="button" class="btn absolute right-3 bottom-4" @click="goToTop">

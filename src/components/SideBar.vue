@@ -5,19 +5,28 @@ import { useSectionsStore } from '~/stores/sections'
 const storeSections = useSectionsStore()
 const sections = storeSections.sections
 const currentSection = ref(storeSections.getCurrentSection)
+
+const showSideBar = ref(true)
+const toggleSideBar = () => {
+  showSideBar.value = !showSideBar.value
+}
 </script>
 
 <template>
+  <button id="menu-button" absolute z-3 right-4 top-4 class="btn" h-8 @click="toggleSideBar">
+    Меню
+  </button>
   <aside
-    class="sidebar w-64 xs:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-white dark:bg-slate-700 rounded-r-3xl text-gray-700 dark:text-gray-200"
+    class="sidebar w-64 xs:shadow transform transition-transform duration-150 ease-in bg-white dark:bg-slate-700 rounded-r-3xl text-gray-700 dark:text-gray-200"
+    :class="{hidden: showSideBar}"
   >
-    <div class="flex flex-col flex-grow pt-5 pb-4   overflow-y-auto rounded-r-3xl">
+    <div class="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto rounded-r-3xl">
       <div class="flex flex-col items-center flex-shrink-0 px-4 mb-8 h-8 w-auto relative">
         <TheAtom />
         <a href="mail:sapogin@mail.ru"><small text-red>sapogin@mail.ru</small></a>
       </div>
       <div class="mt-5 flex-grow flex flex-col">
-        <nav class="flex-1 px-2 space-y-1  " aria-label="Sidebar">
+        <nav class="flex-1 px-2 space-y-1" aria-label="Sidebar">
           <template v-for="section in sections" :key="section.title">
             <a :href="section.path">
               <Disclosure as="div" class="space-y-1">
@@ -35,3 +44,26 @@ const currentSection = ref(storeSections.getCurrentSection)
     </div>
   </aside>
 </template>
+<style lang="scss">
+@media (max-width: 770px){
+  .sidebar{
+    position: absolute;
+    z-index: 2;
+    width: 100% !important;
+    height: 100vh !important;
+  }
+  footer{
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+  }
+}
+@media (min-width: 770px){
+  #menu-button{
+    display: none;
+  }
+   .sidebar{
+    display: flex !important;
+  }
+}
+</style>

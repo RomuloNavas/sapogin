@@ -59,9 +59,43 @@ html.dark .prose {
   --prism-selection-background: #444444;
 }
 
-html p{
-text-align: justify;
+@media (min-width: 800px) {
+  html p{
+  text-align: justify;
+  }
+
 }
+/* For mobile */
+@media (max-width: 800px) {
+  html p, li, a, strong, span, blockquote, button{
+    font-size: large;
+  }
+  h1{
+    margin: 8px 0;
+    font-size: xx-large;
+    font-weight: 800;
+  }
+  h2{
+    margin: 12px 0;
+    font-size: x-large;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  blockquote{
+    margin: 16px 0;
+    padding-top: 40px !important;
+    line-height: 1.25;
+  }
+  a{
+    margin: 8px 0;
+  }
+  img {
+    width: 150px !important;
+    height: content-fit;
+    margin: 2rem auto !important;
+  }
+}
+
 h1{
   padding-top: 2rem;
 }
@@ -85,11 +119,10 @@ html.dark blockquote {
     background:#0F172A;
 }
 blockquote{
-  margin: 50px auto;
   font-family:Open Sans;
   font-style:italic;
-  padding:1.2em 30px 1.2em 75px;
-  border-left:8px solid #78C0A8 ;
+  padding: 1.2rem;
+  /* border-left:8px solid #78C0A8 ; */
   position: relative;
   background:#E2E8F0;
 }

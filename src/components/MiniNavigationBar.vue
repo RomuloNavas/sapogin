@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useSectionsStore } from '~/stores/sections'
 // States for the component
 const active = ref(false)

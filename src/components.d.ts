@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppEquation: typeof import('./components/AppEquation.vue')['default']
     Btn: typeof import('./components/Btn.vue')['default']
     ButtonToTheTop: typeof import('./components/ButtonToTheTop.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
