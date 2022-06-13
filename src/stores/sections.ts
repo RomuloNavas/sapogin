@@ -49,18 +49,6 @@ export const useSectionsStore = defineStore('sections', {
       },
     ],
   }),
-  getters: {
-    getCurrentSection(): any {
-      //  Setting up the router to find the current path:
-      const route = useRoute()
-      const currentPath = route.path
-      // Find the Section's path that matches the current path:
-      const found = this.sections.find(section => section.path === currentPath)
-      if (found)
-        found.current = true
-      return found
-    },
-  },
 })
 
 if (import.meta.hot)

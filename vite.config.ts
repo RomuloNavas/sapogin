@@ -15,7 +15,6 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
-
 export default defineConfig({
   resolve: {
     alias: {
@@ -86,9 +85,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
+        name: 'Sapogin - Physic',
+        short_name: 'Sapogin',
+        theme_color: '#bfdbfe',
         icons: [
           {
             src: '/pwa-192x192.png',
