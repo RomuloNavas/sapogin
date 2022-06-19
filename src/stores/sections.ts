@@ -47,6 +47,11 @@ export const useSectionsStore = defineStore('sections', {
         path: '/technologies',
         current: false,
       },
+      {
+        title: 'Лекции по Электрофизике',
+        path: '/lectures',
+        current: false,
+      },
     ],
   }),
 })
