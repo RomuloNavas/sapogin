@@ -1,6 +1,20 @@
-the images are stored in docs that is public, from the site sapogin
+
+The images are stored in docs that is public, from the site sapogin
 pdf files are stored in 146.190.233.254
 
 Add a new section to the site in the file: `src\stores\sections.ts`. Then create a .vue file in `src\pages`, the file name should be the same as the section's path.
 class 'image'  makes images fit well.
 !DANGER! ->  Do not sync with GitHub.
+!! The `docs` files you must save in my IP adress
+audio looks in folder called audio, it should be in sapogin/html
+
+! Vitesse will not build if you try to import, point, use for a file that does not exist
+
+Server configuration do expose audio:
+location ~ \.(mp3|mp4) {
+    root /var/www/sapogin.com/html;
+    sendfile   on;
+    tcp_nopush on;
+}
+
+It seams that when you move the mp3 files to server, it limits the size of mp3. Move them one by one.
