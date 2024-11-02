@@ -28,11 +28,11 @@ function goToTop() {
 </script>
 
 <template>
-  <div class="flex flex-row h-screen bg-slate-100 dark:bg-slate-800 text-gray-800">
+  <div class="flex flex-row h-screen bg-slate-100 dark:bg-[#000000] ">
     <SideBar />
     <!-- Watch the router state: ./src/modules/nprogress.ts -->
     <!-- <MiniNavigationBar /> -->
-    <main class="main flex flex-col flex-grow transition-all p-2 duration-150 ease-in text-gray-700 dark:text-gray-200 overflow-y-auto">
+    <main class="main flex flex-col flex-grow transition-all p-2 duration-150 ease-in  text-gray-700 dark:text-[#A3A3A3] overflow-y-auto">
       <div ref="mainContent" class="main-content flex flex-col flex-grow  h-full  text-center ">
         <router-view />
       </div>

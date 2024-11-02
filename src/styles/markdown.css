@@ -35,7 +35,7 @@ html:not(.dark) .prose {
 
 html.dark .prose {
   --prism-foreground: #d4cfbf;
-  --prism-background: #151515;
+  --prism-background: #000000;
   --prism-comment: #758575;
   --prism-string: #d48372;
   --prism-literal: #429988;
@@ -57,6 +57,7 @@ html.dark .prose {
   --prism-line-number-gutter: #eeeeee;
   --prism-line-highlight-background: #444444;
   --prism-selection-background: #444444;
+  --un-prose-headings: white;
 }
 
 @media (min-width: 800px) {
@@ -114,10 +115,14 @@ img {
 .main-content a:active{
   color: white !important;
 }
-
-html.dark blockquote {
-    background:#0F172A;
+.main-content a:active{
+  color: red !important;
 }
+
+html.dark blockquote{
+  background:#181818;
+}
+
 blockquote{
   font-family:Open Sans;
   font-style:italic;
@@ -126,10 +131,10 @@ blockquote{
   position: relative;
   background:#E2E8F0;
 }
+
 blockquote::before{
   font-family:Arial;
   content: "\201C";
-  color:#1E293B;
   font-size:60px;
   line-height:1.6;
   position: absolute;
@@ -140,6 +145,7 @@ blockquote::before{
 blockquote::after{
   content: '';
 }
+
 
 blockquote em{
   display:block;
