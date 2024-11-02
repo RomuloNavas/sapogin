@@ -115,9 +115,6 @@ img {
 .main-content a:active{
   color: white !important;
 }
-.main-content a:active{
-  color: red !important;
-}
 
 html.dark blockquote{
   background:#181818;
