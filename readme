@@ -19,10 +19,11 @@ sudo pnpm run dev
 >The images are stored in docs that is public, from the site sapogin
 pdf files are stored in my droplet with api: 146.190.233.254
 
-Add a new section to the site in the file: `src\stores\sections.ts`. Then create a .vue file in `src\pages`, the file name should be the same as the section's path.
-class 'image'  makes images fit well.
+Add a new section to the site in the file: `src\stores\sections.ts`. Then create a `.md` file in `src\pages`, the file name should be the same as the section's path.
 
-!DANGER! ->  Do not sync with GitHub.
+Class 'image'  makes images fit well.
+
+❌DANGER❌ ->  Do not sync with GitHub.
 
 !! The `docs` files you must save in my IP adress 
 audio looks in folder called audio, it should be in sapogin/html

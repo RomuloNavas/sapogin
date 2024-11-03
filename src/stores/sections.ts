@@ -52,6 +52,11 @@ export const useSectionsStore = defineStore('sections', {
         path: '/lectures',
         current: false,
       },
+      {
+        title: 'Принцип Вечного Движения',
+        path: '/perpetual_motion',
+        current: false,
+      },
     ],
   }),
 })

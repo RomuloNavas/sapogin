@@ -32,8 +32,8 @@ function goToTop() {
     <SideBar />
     <!-- Watch the router state: ./src/modules/nprogress.ts -->
     <!-- <MiniNavigationBar /> -->
-    <main class="main flex flex-col flex-grow transition-all p-2 duration-150 ease-in  text-gray-700 dark:text-[#A3A3A3] overflow-y-auto">
-      <div ref="mainContent" class="main-content flex flex-col flex-grow  h-full  text-center ">
+    <main class="main flex flex-col flex-grow transition-all p-2 duration-150 ease-in  text-gray-700 dark:text-[#A3A3A3] overflow-y-auto ">
+      <div ref="mainContent" class="main-content flex flex-col flex-grow   text-center pb-80px">
         <router-view />
       </div>
       <button type="button" class="btn absolute right-3 bottom-4" @click="goToTop">
