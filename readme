@@ -23,8 +23,6 @@ Add a new section to the site in the file: `src\stores\sections.ts`. Then create
 
 Class 'image'  makes images fit well.
 
-❌DANGER❌ ->  Do not sync with GitHub.
-
 !! The `docs` files you must save in my IP adress 
 audio looks in folder called audio, it should be in sapogin/html
 
@@ -41,3 +39,11 @@ location ~ \.(mp3|mp4) {
 ```
 
 Note: It seams that when you move the mp3 files to server, it limits the size of mp3. Move them one by one
+
+## Publish
+
+```bash
+pnpm run build
+```
+
+Then send `assets` folder, then `.html` and `.js` files from `/dist` folder. Upload only new images or audios if required.
